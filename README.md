@@ -6,26 +6,7 @@ listening on, and lets you close any of them in a couple of keystrokes.
 No installer, no runtime, no dependencies to `npm install` — it's one bash
 script that reads `lsof` output.
 
-```
-$ openports
-
-openports - listening ports on this machine
-PID    PROCESS            USER       PROTO PORT    ADDRESS
---------------------------------------------------------------------------
->   *  1234   node               dev        TCP   3000    *:3000
-    2201   postgres           dev        TCP   5432    127.0.0.1:5432
-    2210   redis-server       dev        TCP   6379    127.0.0.1:6379
-    3305   node               dev        TCP   5173    *:5173
-    4102   webpack-dev-server dev        TCP   8080    *:8080
-    5010   python3            dev        TCP   8000    127.0.0.1:8000
---------------------------------------------------------------------------
-j/k or arrows move  space select  enter kill  a all  n none  r refresh  q quit
-1/6 ports
-
-About to kill:
-   PID 1234 (node) - port(s) 3000
-Proceed? [y/N]
-```
+![openports in action](assets/openports-solution.gif)
 
 ## Why
 
@@ -41,6 +22,8 @@ kill -9 <pid>
 currently has open, and one typo away from killing the wrong process.
 `openports` turns that into: run it, arrow down to the row you want, hit
 enter.
+
+![the "which app is squatting on port 3000" problem](assets/openports-problem.gif)
 
 ## Install
 
