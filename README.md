@@ -44,6 +44,10 @@ directory afterwards. Pick whichever of the two target directories is
 already on your `$PATH` (check with `echo $PATH`); `/usr/local/bin` may
 need `sudo` since it's typically root-owned.
 
+If `openports` says `command not found` right after installing, your
+shell has already cached the fact that it didn't exist. Run `hash -r`
+(zsh/bash) to clear that cache, or just open a new terminal tab/window.
+
 ## Usage
 
 Run `openports` with no arguments. Keys:
